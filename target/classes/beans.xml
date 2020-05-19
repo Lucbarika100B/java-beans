@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+       
+       
+       <bean id="genericEmployee" class="com.beanshmw1.firstproject.entities.Employee">
+       <property name="department" ref="department"></property> 
+       </bean>
+       
+       <bean id="department" class="com.beanshmw1.firstproject.entities.Department" scope="singleton">
+       <property name="id" value="123"></property> 
+       <property name="name" value="Engineering"></property>
+       <property name="city" value="Brazzaville"></property>
+       	
+       </bean>
+       
+       
+       
+       <bean id="emp1" parent="genericEmployee" class="com.beanshmw1.firstproject.entities.Employee"
+       	autowire="byType"> 
+       	<property name="firstName" value="Thony"></property>
+       	<property name="lastName" value="Hombessa"></property>
+       	<property name="salary" value="50"></property>
+       	<property name="email" value="Thony@hombessa.barika"></property>
+       </bean> 
+       
+        <bean id="emp2" parent="genericEmployee" class="com.beanshmw1.firstproject.entities.Employee"
+       	autowire="byType"> 
+       	<property name="firstName" value="Zawa"></property>
+       	<property name="lastName" value="Saida"></property>
+       	<property name="salary" value="10"></property>
+       	<property name="email" value="zawa@hombessa.barika"></property>
+       </bean>
+       
+        <bean id="emp3" parent="genericEmployee" class="com.beanshmw1.firstproject.entities.Employee"
+       	autowire="byType"> 
+       	<property name="firstName" value="Bernadette"></property>
+       	<property name="lastName" value="Hombessa"></property>
+       	<property name="salary" value="100"></property>
+       	<property name="email" value="bernadette@hombessa.barika"></property>
+       </bean>
+       
+       </beans> 
+       
