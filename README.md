@@ -1,5 +1,5 @@
 # java-beans
-java-beans homework 1
+java-beans homework 
 
 Instructor Hamit Pena Sierra
 Assignment I
